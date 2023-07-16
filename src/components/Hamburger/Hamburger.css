@@ -1,0 +1,38 @@
+.hamburger {
+    width: 32px;
+    height: 32px;
+    padding: 0 4px;
+    cursor: pointer;
+}
+
+.hamburger .top,
+.hamburger .middle,
+.hamburger .bottom {
+    width: 24px;
+    height: 4px;
+    margin-top: 5px;
+    background: var(--primary-2);
+    border-radius: 2px;
+}
+
+.hamburger.active .top {
+    position: relative;
+    top: 1px;
+    transform-origin: left;
+    transform: rotate(45deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+.hamburger.active .middle {
+    visibility: hidden;
+}
+
+.hamburger.active .bottom {
+    transform-origin: left;
+    transform: rotate(-45deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+.hamburger:hover > * {
+    background: var(--highlight-2);
+}

@@ -1,0 +1,77 @@
+.nav {
+    position: absolute;
+    top: -320px;
+    left: 0;
+    width: 100%;
+    background: white;
+    border-top: 1px solid var(--shadow);
+    box-shadow: 0 4px 4px var(--shadow);
+    transform: translateZ(-10px);
+}
+
+.nav.active {
+    top: 64px;
+    transition: all 0.5s linear;
+}
+
+.nav > ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav a {
+    font-weight: 500;
+    display: block;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+}
+
+.nav a:hover {
+    color: var(--highlight-2);
+    background: var(--highlight-1);
+}
+
+.nav a:active {
+    color: var(--highlight-1);
+    background: var(--highlight-2);
+}
+
+@media screen and (min-width: 768px) {
+    .nav {
+        position: static;
+        border: none;
+        box-shadow: none;
+        transform: none;
+        transition: none;
+    }
+
+    .nav > ul {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .nav a {
+        height: auto;
+        line-height: normal;
+    }
+
+    .nav a:hover {
+        background: none;
+    }
+
+    .nav a::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background: var(--primary-2);
+        transition: width 0.3s ease-in-out;
+    }
+
+    .nav a:hover::after {
+        width: 100%;
+    }
+}
