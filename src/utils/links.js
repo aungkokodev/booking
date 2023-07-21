@@ -2,7 +2,7 @@ export const navigation = [
     { text: "Home", to: "/home" },
     { text: "About", to: "/about" },
     { text: "Menu", to: "/menu" },
-    { text: "Reservation", to: "/reservation" },
+    { text: "Reservation", to: "/booking" },
     { text: "Order", to: "/order" },
 ];
 
@@ -14,7 +14,7 @@ export const social = [
 
 export const address = [
     { text: "120 Maggio Turnpike,", to: "#" },
-    { text: " Lisettetown, Nevada", to: "#" },
+    { text: " Lisettetown, Chicago", to: "#" },
     { text: "mail@domain.org", to: "#" },
     { text: "0123456789", to: "#" },
 ];

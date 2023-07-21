@@ -1,0 +1,88 @@
+.hero-section {
+    height: calc(100vh - 64px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    background-color: var(--primary-2);
+    background-image: url(../../assets/restauranfood.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-left,
+.hero-right {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-left {
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.hero-left > h1 {
+    color: var(--primary-1);
+}
+
+.hero-left > h2,
+.hero-left > p {
+    color: white;
+}
+
+.hero-left > .btn {
+    margin-top: 1rem;
+}
+
+.hero-right {
+    display: none;
+    max-width: 40%;
+    overflow: hidden;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 4px 4px 8px var(--shadow), 0px 0px 4px var(--shadow);
+    border: 4px solid var(--primary-1);
+}
+
+.hero-right > img {
+    max-width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.hero-right > img:hover {
+    transform: scale(1.5);
+}
+
+.backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    backdrop-filter: brightness(0.5);
+}
+
+@media screen and (min-width: 768px) {
+    .hero-section {
+        background-image: none;
+    }
+
+    .hero-right {
+        display: block;
+    }
+
+    .backdrop {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1020px) {
+    .hero-right {
+        align-self: flex-start;
+    }
+}

@@ -1,0 +1,67 @@
+.review-section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.review-section-body {
+    position: relative;
+    max-width: 252px;
+    margin: auto;
+}
+
+.review-scroll-container {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.review-prev,
+.review-next {
+    cursor: pointer;
+    position: absolute;
+    top: calc(50% - 1rem);
+    width: 1.5rem;
+    height: 2rem;
+    color: var(--primary-2);
+    background: #ffffff40;
+    line-height: 2rem;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px var(--shadow);
+    opacity: 0.7;
+}
+
+.review-prev {
+    left: -1.5rem;
+}
+
+.review-next {
+    right: -1.5rem;
+}
+
+.review-prev:hover,
+.review-next:hover {
+    background: var(--highlight-1);
+}
+
+.review-prev:active,
+.review-next:active {
+    box-shadow: none;
+}
+
+@media screen and (max-width: 300px) {
+    .review-prev {
+        left: -1rem;
+    }
+
+    .review-next {
+        right: -1rem;
+    }
+}
+@media screen and (min-width: 768px) {
+    .review-section-body {
+        max-width: 756px;
+    }
+}

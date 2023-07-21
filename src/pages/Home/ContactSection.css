@@ -1,0 +1,14 @@
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    text-align: center;
+    background: var(--primary-2);
+}
+
+.contact-section > h2,
+.contact-section > p {
+    color: white;
+    text-align: justify;
+}

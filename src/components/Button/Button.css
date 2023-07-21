@@ -1,0 +1,29 @@
+.btn {
+    border: none;
+    width: 220px;
+    height: 40px;
+    box-shadow: var(--shadow);
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 4px var(--shadow);
+}
+
+.btn.primary {
+    background: var(--primary-1);
+    color: black;
+}
+
+.btn.secondary {
+    background: var(--primary-2);
+    color: white;
+}
+
+.btn:hover {
+    background: var(--highlight-1);
+    color: black;
+}
+
+.btn:active {
+    box-shadow: none;
+}

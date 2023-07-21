@@ -1,0 +1,32 @@
+.special-section-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.special-section-header > .btn {
+    display: none;
+}
+
+.special-section-body {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 360px;
+    margin: auto;
+}
+
+.special-section-body > * {
+    flex: 1;
+}
+
+@media screen and (min-width: 768px) {
+    .special-section-header > .btn {
+        display: block;
+    }
+
+    .special-section-body {
+        flex-direction: row;
+        max-width: 1024px;
+    }
+}
