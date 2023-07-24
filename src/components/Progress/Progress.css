@@ -1,0 +1,43 @@
+.progress {
+    display: flex;
+    align-items: center;
+}
+
+.progress-circle {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+    background: var(--highlight-1);
+    box-shadow: 0 4px 4px var(--shadow);
+    text-align: center;
+    color: var(--primary-2);
+    line-height: 2rem;
+    font-weight: bold;
+    cursor: not-allowed;
+}
+
+.progress-circle.active,
+.progress-line.active {
+    color: var(--highlight-1);
+    background: var(--primary-2);
+}
+
+.progress-circle.clickable {
+    cursor: pointer;
+}
+
+.progress-circle.clickable:hover {
+    color: var(--primary-2);
+    background: var(--highlight-1);
+}
+
+.progress-circle.clickable:active {
+    box-shadow: none;
+}
+
+.progress-line {
+    flex: 1;
+    height: 0.5rem;
+    background: var(--highlight-1);
+    box-shadow: 0 4px 4px var(--shadow);
+}

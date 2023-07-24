@@ -1,0 +1,89 @@
+.booking-section {
+    padding-top: 2rem;
+    min-height: 100vh;
+}
+
+.booking-section-header {
+    margin: auto;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.booking-section-body {
+    max-width: 220px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: left;
+}
+
+.booking-form p {
+    font-weight: bold;
+}
+
+.booking-form .btn {
+    margin-top: 1.5rem;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.input-group-name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-group-name > * {
+    width: 45%;
+}
+
+.info-group {
+    display: flex;
+}
+
+.info-group > p {
+    width: 50%;
+    word-wrap: break-word;
+}
+
+.info-group > .info-label {
+    font-weight: normal;
+}
+
+textarea {
+    resize: none;
+}
+
+input,
+select,
+textarea {
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--primary-2);
+    border-radius: 4px;
+    color: var(--primary-2);
+    font-size: 1rem;
+    box-shadow: 0 0 4px var(--shadow);
+    outline: none;
+    font-family: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border: 2px solid dodgerblue;
+    box-shadow: 0 0 4px dodgerblue;
+}
+
+form[data-testid="booking-confirm"] {
+    gap: 1rem;
+}

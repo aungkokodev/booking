@@ -17,7 +17,7 @@ const ReviewSection = () => {
     };
 
     useEffect(() => {
-        const timeout = setInterval(handleScroll, 5000);
+        const timeout = setInterval(handleScroll, 3000);
         return () => {
             clearInterval(timeout);
         };
