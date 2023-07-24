@@ -1,6 +1,7 @@
 .booking-section {
     padding-top: 2rem;
     min-height: 100vh;
+    scroll-margin-top: 64px;
 }
 
 .booking-section-header {
@@ -35,12 +36,25 @@
 .input-group {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.25rem;
+    position: relative;
+}
+
+.input-group > .input-error,
+.input-group-name > .input-error {
+    position: absolute;
+    left: 0;
+    bottom: -1.4rem;
+    width: 110%;
+    font-size: small;
+    font-weight: normal;
+    color: red;
 }
 
 .input-group-name {
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 
 .input-group-name > * {

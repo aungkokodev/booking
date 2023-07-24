@@ -29,7 +29,9 @@ const Booking = () => {
     const [availableTimes, timesDispatch] = useReducer(updateTime, initializeTimes());
 
     const booking = useRef();
-    const goTop = () => booking.current.scrollIntoView();
+    const goTop = () =>
+        typeof booking.current.scrollIntoView === "function" &&
+        booking.current.scrollIntoView({ behavior: "smooth" });
 
     const submitForm = () => submitAPI(formData);
 

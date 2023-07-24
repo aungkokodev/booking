@@ -1,4 +1,6 @@
 import "./Booking.css";
+import { useState } from "react";
+import { is } from "../../utils/validation";
 import Button from "../../components/Button/Button";
 
 const BookingForm = ({
@@ -11,10 +13,23 @@ const BookingForm = ({
     updateCurrent,
     goTop,
 }) => {
+    const [isFormFocused, setIsFormFocused] = useState(false);
+
     const handleChange = (key, value) => {
         setFormData((prev) => {
             return { ...prev, [key]: value };
         });
+    };
+
+    const isButtonDisabled = !(
+        is.date(formData.date) &&
+        is.string(formData.time) &&
+        is.guest(formData.guests) &&
+        is.string(formData.location)
+    );
+
+    const handleFormFocus = () => {
+        setIsFormFocused(true);
     };
 
     const handleFormSubmit = (e) => {
@@ -25,7 +40,11 @@ const BookingForm = ({
     };
 
     return (
-        <form className="booking-form" onSubmit={handleFormSubmit} data-testid="booking-form">
+        <form
+            className="booking-form"
+            data-testid="booking-form"
+            onFocus={handleFormFocus}
+            onSubmit={handleFormSubmit}>
             <p>Please choose booking info</p>
             <div className="input-group">
                 <label htmlFor="booking-date">Date</label>
@@ -39,6 +58,9 @@ const BookingForm = ({
                         timesDispatch({ type: "UPDATE", payload: e.target.value });
                     }}
                 />
+                {isFormFocused && !is.date(formData.date) && (
+                    <p className="input-error">Please choose a date in the future</p>
+                )}
             </div>
             <div className="input-group">
                 <label htmlFor="booking-time">Time</label>
@@ -52,6 +74,9 @@ const BookingForm = ({
                         <option key={time}>{time}</option>
                     ))}
                 </select>
+                {isFormFocused && !is.string(formData.time) && (
+                    <p className="input-error">Please choose a time</p>
+                )}
             </div>
             <div className="input-group">
                 <label htmlFor="booking-guests">Guests</label>
@@ -64,6 +89,9 @@ const BookingForm = ({
                     value={formData.guests}
                     onChange={(e) => handleChange("guests", e.target.value)}
                 />
+                {isFormFocused && !is.guest(formData.guests) && (
+                    <p className="input-error">Please choose guests between 1 and 10</p>
+                )}
             </div>
             <div className="input-group">
                 <label htmlFor="booking-location">Location</label>
@@ -76,6 +104,9 @@ const BookingForm = ({
                     <option>Indoor</option>
                     <option>Outdoor</option>
                 </select>
+                {isFormFocused && !is.string(formData.location) && (
+                    <p className="input-error">Please choose a location</p>
+                )}
             </div>
             <div className="input-group">
                 <label htmlFor="booking-occasion">Occasion (optional)</label>
@@ -88,7 +119,9 @@ const BookingForm = ({
                     <option>Anniversary</option>
                 </select>
             </div>
-            <Button type="primary">Continue</Button>
+            <Button type="primary" disabled={isButtonDisabled}>
+                Continue
+            </Button>
         </form>
     );
 };

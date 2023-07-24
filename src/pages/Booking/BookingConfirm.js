@@ -1,12 +1,13 @@
 import "./Booking.css";
 import Button from "../../components/Button/Button";
 
-const BookingConfirm = ({ formData, submitForm, last, updateLast, updateCurrent }) => {
+const BookingConfirm = ({ formData, submitForm, last, updateLast, updateCurrent, goTop }) => {
     const handleFormSubmit = (e) => {
         e.preventDefault();
         submitForm();
         last < 4 && updateLast(4);
         updateCurrent(4);
+        goTop();
     };
 
     return (
@@ -56,9 +57,7 @@ const BookingConfirm = ({ formData, submitForm, last, updateLast, updateCurrent 
                     <p>{formData.request}</p>
                 </div>
             )}
-            <Button type="primary" data-testid="booking-confirm-btn">
-                Confirm Booking
-            </Button>
+            <Button type="primary">Confirm Booking</Button>
         </form>
     );
 };

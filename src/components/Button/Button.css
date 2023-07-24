@@ -20,12 +20,17 @@
     color: white;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:disabled {
     background: var(--highlight-1);
     color: black;
 }
 
-.btn:active {
+.btn:disabled {
+    cursor: not-allowed;
+}
+
+.btn[disabled="false"]:active {
     box-shadow: none;
 }
 
