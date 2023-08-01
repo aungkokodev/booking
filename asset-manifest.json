@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/booking-test/static/css/main.4cacb12b.css",
+    "main.js": "/booking-test/static/js/main.e8dedc91.js",
+    "static/media/bruchetta.svg": "/booking-test/static/media/bruchetta.ec4950d4eabf4293f4120e3b6c48b7cf.svg",
+    "static/media/restauranfood.jpg": "/booking-test/static/media/restauranfood.bc4c5931d9c0a13a4caa.jpg",
+    "static/media/greek salad.jpg": "/booking-test/static/media/greek salad.18245b78b78d24db1663.jpg",
+    "static/media/about-1.jpg": "/booking-test/static/media/about-1.ee7530b741205150285e.jpg",
+    "static/media/about-2.jpg": "/booking-test/static/media/about-2.8f21834a294f627cfc7a.jpg",
+    "static/media/avatar-2.jpg": "/booking-test/static/media/avatar-2.da2445a1f6770a3cb6fa.jpg",
+    "static/media/avatar-3.jpg": "/booking-test/static/media/avatar-3.8ccd6eda633ee46364f7.jpg",
+    "static/media/avatar-5.jpg": "/booking-test/static/media/avatar-5.d7e5c0fb7b2d7340a3eb.jpg",
+    "static/media/avatar-4.jpg": "/booking-test/static/media/avatar-4.ccee57291f86d678ab83.jpg",
+    "static/media/avatar-1.jpg": "/booking-test/static/media/avatar-1.044264343e02cc1c74ee.jpg",
+    "static/media/logo-sm.png": "/booking-test/static/media/logo-sm.2c859235d6c57bb54176.png",
+    "static/media/logo.png": "/booking-test/static/media/logo.d4cae6fac8384c2dae04.png",
+    "static/media/lemon dessert.jpg": "/booking-test/static/media/lemon dessert.0692954635fc970d0ccc.jpg",
+    "index.html": "/booking-test/index.html",
+    "static/media/basket.svg": "/booking-test/static/media/basket.07e27ef8e2d39d8d311117a6b04ece1d.svg",
+    "main.4cacb12b.css.map": "/booking-test/static/css/main.4cacb12b.css.map",
+    "main.e8dedc91.js.map": "/booking-test/static/js/main.e8dedc91.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4cacb12b.css",
+    "static/js/main.e8dedc91.js"
+  ]
+}
